@@ -55,7 +55,7 @@ pipeline {
                 sshagent(['ec2-ssh-key']) {
                     sh """
                         ssh -o StrictHostKeyChecking=no ubuntu@3.20.232.69 \
-                        "/home/ubuntu/deploy_backend.sh $IMAGE_TAG"
+                        "/home/ubuntu/deploy_backend.sh ${IMAGE_TAG}"
                     """
                 }
             }
